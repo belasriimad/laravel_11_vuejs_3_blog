@@ -25,7 +25,7 @@
                                             name="title_en"
                                             id="title_en"
                                             class="form-control @error('title_en') is-invalid @enderror"
-                                            value="{{$post->title_en,old('title_en')}}"
+                                            value="{{old('title_en',$post->title_en)}}"
                                             placeholder="Title EN"
                                             aria-describedby="helpId"
                                         />
@@ -44,7 +44,7 @@
                                             name="title_fr"
                                             id="title_fr"
                                             class="form-control @error('title_fr') is-invalid @enderror"
-                                            value="{{$post->title_fr,old('title_fr')}}"
+                                            value="{{old('title_fr',$post->title_fr)}}"
                                             placeholder="Title FR"
                                             aria-describedby="helpId"
                                         />
@@ -59,7 +59,7 @@
                                         <textarea 
                                             class="form-control @error('body_en') is-invalid @enderror" 
                                             name="body_en" id="body_en" rows="3"
-                                            placeholder="Body EN*">{{$post->body_en,old('body_en')}}</textarea>
+                                            placeholder="Body EN*">{{old('body_en',$post->body_en)}}</textarea>
                                         @error('body_en')
                                             <span class="invalid-feedback">
                                                 <strong>{{ $message }}</strong>
@@ -71,7 +71,7 @@
                                         <textarea 
                                             class="form-control @error('body_fr') is-invalid @enderror" 
                                             name="body_fr" id="body_fr" rows="3"
-                                            placeholder="Body FR*">{{$post->body_fr,old('body_fr')}}</textarea>
+                                            placeholder="Body FR*">{{old('body_fr',$post->body_fr)}}</textarea>
                                         @error('body_fr')
                                             <span class="invalid-feedback">
                                                 <strong>{{ $message }}</strong>
