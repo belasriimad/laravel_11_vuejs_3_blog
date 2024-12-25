@@ -25,7 +25,7 @@
                                             name="name_en"
                                             id="name_en"
                                             class="form-control @error('name_en') is-invalid @enderror"
-                                            value="{{$category->name_en,old('name_en')}}"
+                                            value="{{old('name_en',$category->name_en)}}"
                                             placeholder="Name EN"
                                             aria-describedby="helpId"
                                         />
